@@ -1,15 +1,12 @@
 // Following https://github.com/glium/glium/blob/master/book/tuto-01-getting-started.md
 // This puts glium's macros in our scope.
-#[macro_use]
 extern crate glium;
 
 fn main() {
     use glium::glutin;
     use glium::Surface;
 
-    // TODO: What are traits?
-
-    let mut event_loop = glutin::event_loop::EventLoop::new();
+    let event_loop = glutin::event_loop::EventLoop::new();
     let wb = glutin::window::WindowBuilder::new();
     let cb = glutin::ContextBuilder::new();
     let display = glium::Display::new(wb, cb, &event_loop).unwrap();
